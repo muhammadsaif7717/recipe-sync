@@ -49,7 +49,7 @@ export const authOptions: NextAuthOptions = {
             name: fullName,
             email: credentials.email,
             password: hashedPassword,
-            createdAt: new Date(),
+            createdAt:  new Date().toISOString(),
             image: credentials.image,
             role: credentials.role,
           });
@@ -115,7 +115,7 @@ export const authOptions: NextAuthOptions = {
               email: user.email,
               image: user.image,
               role: 'user',
-              createdAt: new Date(),
+              createdAt:  new Date().toISOString(),
             });
 
             token.id = result.insertedId.toString();

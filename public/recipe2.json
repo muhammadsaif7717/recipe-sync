@@ -8,7 +8,12 @@
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Indian",
-    "tags": ["Spicy", "Dinner", "Comfort Food", "Healthy"],
+    "tags": [
+      "Spicy",
+      "Dinner",
+      "Comfort Food",
+      "Healthy"
+    ],
     "ingredients": [
       {
         "id": "1",
@@ -99,7 +104,13 @@
     "servings": 6,
     "difficulty": "Easy",
     "cuisine": "Mediterranean",
-    "tags": ["Vegetarian", "Healthy", "Gluten-Free", "Lunch", "Quick"],
+    "tags": [
+      "Vegetarian",
+      "Healthy",
+      "Gluten-Free",
+      "Lunch",
+      "Quick"
+    ],
     "ingredients": [
       {
         "id": "1",
@@ -190,7 +201,12 @@
     "servings": 24,
     "difficulty": "Easy",
     "cuisine": "American",
-    "tags": ["Sweet", "Dessert", "Comfort Food", "Snack"],
+    "tags": [
+      "Sweet",
+      "Dessert",
+      "Comfort Food",
+      "Snack"
+    ],
     "ingredients": [
       {
         "id": "1",
@@ -275,13 +291,18 @@
   {
     "title": "Authentic Pad Thai",
     "description": "A classic Thai stir-fried noodle dish with a perfect balance of sweet, sour, and savory flavors. Topped with crushed peanuts and lime.",
-    "image": "",
+    "image": "https://images.unsplash.com/photo-1637235549417-9a949b893b04",
     "cookTime": 15,
     "prepTime": 25,
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Thai",
-    "tags": ["Spicy", "Dinner", "Quick", "Savory"],
+    "tags": [
+      "Spicy",
+      "Dinner",
+      "Quick",
+      "Savory"
+    ],
     "ingredients": [
       {
         "id": "1",
@@ -372,7 +393,12 @@
     "servings": 4,
     "difficulty": "Hard",
     "cuisine": "Italian",
-    "tags": ["Vegetarian", "Dinner", "Comfort Food", "Savory"],
+    "tags": [
+      "Vegetarian",
+      "Dinner",
+      "Comfort Food",
+      "Savory"
+    ],
     "ingredients": [
       {
         "id": "1",
@@ -457,13 +483,18 @@
   {
     "title": "Korean Beef Bulgogi",
     "description": "Tender marinated beef grilled to perfection with a sweet and savory Korean sauce. Served with steamed rice and fresh vegetables.",
-    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop",
+    "image": "https://images.unsplash.com/photo-1584278858536-52532423b9ea",
     "cookTime": 10,
     "prepTime": 240,
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Korean",
-    "tags": ["Spicy", "Dinner", "Healthy", "Savory"],
+    "tags": [
+      "Spicy",
+      "Dinner",
+      "Healthy",
+      "Savory"
+    ],
     "ingredients": [
       {
         "id": "1",
