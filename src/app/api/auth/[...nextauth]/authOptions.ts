@@ -49,9 +49,9 @@ export const authOptions: NextAuthOptions = {
             name: fullName,
             email: credentials.email,
             password: hashedPassword,
-            createdAt:  new Date().toISOString(),
             image: credentials.image,
             role: credentials.role,
+            createdAt:  new Date().toISOString(),
           });
 
           return {
@@ -113,6 +113,7 @@ export const authOptions: NextAuthOptions = {
             const result = await usersCollection.insertOne({
               name: user.name,
               email: user.email,
+              password:"",
               image: user.image,
               role: 'user',
               createdAt:  new Date().toISOString(),
