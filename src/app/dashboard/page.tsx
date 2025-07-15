@@ -154,7 +154,7 @@ const Dashboard = () => {
                     <ActionButton
                       Icon={Users}
                       label='Manage Users'
-                      href='/admin/users'
+                      href='/dashboard/admin/users'
                     />
                     <ActionButton
                       Icon={BookOpen}
@@ -164,7 +164,7 @@ const Dashboard = () => {
                     <ActionButton
                       Icon={Settings}
                       label='Site Settings'
-                      href='/admin/settings'
+                      href='/dashboard/admin/settings'
                     />
                   </>
                 ) : (

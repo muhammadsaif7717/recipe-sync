@@ -34,6 +34,9 @@ export interface Recipe {
   steps: Step[];
   author: Author;
   status: 'pending' | 'published';
+  createdAt?: string;
+  updatedAt?: string;
+  approvedAt?: string;
 }
 
 export interface ActionButtonProps {

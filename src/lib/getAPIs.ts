@@ -49,6 +49,18 @@ export const deleteUser = async (userId: string) => {
 // update user role
 export const updateUserRole = async (userId: string, newRole: string) => {
   const data = { userId, newRole };
-  const res = await axios.post(`${url}/api/v1/users/update/`, data);
+  const res = await axios.post(`${url}/api/v1/users/update`, data);
+  return res;
+};
+
+// publish recipe
+export const publishRecipe = async (recipeId: string) => {
+  const res = await axios.post(`${url}/api/v1/recipes/publish`, { recipeId });
+  return res;
+};
+
+// decline recipe
+export const deleteRecipe = async (recipeId: string) => {
+  const res = await axios.post(`${url}/api/v1/recipes/delete`, { recipeId });
   return res;
 };

@@ -39,7 +39,8 @@ import {
 import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
 import { Recipe } from '@/types';
-import { getRecipes } from '@/lib/getAPIs';
+import { deleteRecipe, getRecipes, publishRecipe } from '@/lib/getAPIs';
+import { toast } from 'sonner';
 
 // Animation variants
 const containerVariants: Variants = {
@@ -98,6 +99,7 @@ export default function PendingPage() {
     data: recipes = [],
     isLoading,
     isError,
+    refetch,
   } = useQuery<Recipe[]>({
     queryKey: ['recipes', 'pending'],
     queryFn: () => getRecipes('pending'),
@@ -126,14 +128,36 @@ export default function PendingPage() {
 
   const uniqueCuisines = [...new Set(recipes.map((r) => r.cuisine))];
 
-  const handleApprove = (recipeId: string) => {
-    // Add approval logic here
-    console.log('Approving recipe:', recipeId);
+  const handleApprove = async (recipeId: string) => {
+    try {
+      const res = await publishRecipe(recipeId);
+
+      if (res.status === 200) {
+        toast.success('Recipe approved and published!');
+        refetch();
+      } else {
+        toast.error('Failed to publish recipe');
+      }
+    } catch (error) {
+      toast.error('An error occurred while publishing');
+      console.error('Publish error:', error);
+    }
   };
 
-  const handleDecline = (recipeId: string) => {
-    // Add decline logic here
-    console.log('Declining recipe:', recipeId);
+  const handleDecline = async (recipeId: string) => {
+    try {
+      const res = await deleteRecipe(recipeId);
+
+      if (res.status === 200) {
+        toast.success('Recipe declined and deleted successfully!');
+        refetch();
+      } else {
+        toast.error('Failed to delete recipe');
+      }
+    } catch (error) {
+      toast.error('Error while deleting recipe');
+      console.error('Decline/Delete error:', error);
+    }
   };
 
   if (isError) {

@@ -89,6 +89,9 @@ export default function AddRecipePage() {
     steps: [{ id: '1', instruction: '' }],
     author: author,
     status: 'pending',
+    createdAt: new Date().toISOString(),
+    updatedAt: '',
+    approvedAt: '',
   });
 
   const [newTag, setNewTag] = useState('');
