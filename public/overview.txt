@@ -1,0 +1,62 @@
+RecipeSync - Project Summary
+🎯 Project Overview
+Building a modern, full-stack recipe sharing platform with premium UI/UX design, featuring seamless dark/light theming and eye-catching animations.
+🛠️ Tech Stack
+
+Frontend: Next.js 15.3.4 (App Router) + TypeScript 5 + Tailwind CSS 4 + shadcn/ui
+Backend: NextJS + MongoDB 6.17.0
+Authentication: NextAuth.js 4.24.11
+Styling: next-themes 0.4.6 + Framer Motion 12.19.1
+HTTP: Axios 1.10.0
+Runtime: React 19.0.0 + React DOM 19.0.0
+
+🗂️ Application Structure
+Routes: / | /recipe | /add-recipe | /blogs | /auth/sign-in | /auth/sign-up | /dashboard
+Navbar Features: Logo + Navigation + Theme Toggle + User Avatar/Login Button
+🎨 Design System
+Light Mode - "Warm Culinary"
+
+Background: bg-slate-50 + Cards: bg-white
+Text: text-slate-900 (primary) + text-slate-600 (secondary)
+Accents: bg-emerald-500 (primary) + bg-amber-500 (secondary) + bg-rose-500 (tertiary)
+
+Dark Mode - "Midnight Gourmet"
+
+Background: dark:bg-slate-950 + Cards: dark:bg-slate-900/80
+Text: dark:text-slate-50 (primary) + dark:text-slate-300 (secondary)
+Accents: dark:bg-emerald-400 + dark:bg-amber-400 + dark:bg-rose-400
+
+📱 Responsive Strategy
+
+Mobile (320px+): Single column, touch-optimized, drawer navigation
+Tablet (640px+): Two-column grids, sidebar navigation
+Desktop (1024px+): Multi-column layouts, advanced interactions
+Large (1280px+): Five-column grids, multi-panel dashboards
+
+✨ Key Features
+
+Theming: Custom dark/light mode with smooth transitions
+Animations: Framer Motion 12.19.1 for micro-interactions and page transitions
+Authentication: NextAuth.js 4.24.11 social login + email/password
+UI/UX: Glassmorphism effects, hover animations, skeleton loading
+Responsive: Mobile-first design with progressive enhancement
+
+🎭 Visual Enhancements
+
+Premium color palette optimized for food content
+Advanced shadow and border radius systems
+Typography scaling with multiple font families
+Eye-catching animations and micro-interactions
+Professional glassmorphism and backdrop effects
+
+🔧 Development Tools
+
+Build: Turbopack for faster development
+Code Quality: ESLint 9 + Prettier 3.6.1 with Tailwind plugin 0.6.13
+Type Safety: TypeScript 5 with React 19 types
+
+Goal: Create a visually stunning, highly functional recipe platform that provides an immersive culinary experience across all devices.
+
+i have setup shadecn and next-themes.... i will setup next-auth letter.
+
+///NOW
