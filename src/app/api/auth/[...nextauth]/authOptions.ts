@@ -51,7 +51,7 @@ export const authOptions: NextAuthOptions = {
             password: hashedPassword,
             image: credentials.image,
             role: credentials.role,
-            createdAt:  new Date().toISOString(),
+            createdAt: new Date().toISOString(),
           });
 
           return {
@@ -113,10 +113,10 @@ export const authOptions: NextAuthOptions = {
             const result = await usersCollection.insertOne({
               name: user.name,
               email: user.email,
-              password:"",
+              password: '',
               image: user.image,
               role: 'user',
-              createdAt:  new Date().toISOString(),
+              createdAt: new Date().toISOString(),
             });
 
             token.id = result.insertedId.toString();

@@ -17,6 +17,8 @@ import {
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { ActionButtonProps, StatCardProps } from '@/types';
+import { useQuery } from '@tanstack/react-query';
+import { getStats } from '@/lib/getAPIs';
 
 // Mock data
 const mockUserStats = {
@@ -26,17 +28,24 @@ const mockUserStats = {
   totalViews: 1240,
 };
 
-const mockAdminStats = {
-  totalUsers: 1250,
-  totalRecipes: 3400,
-  totalViews: 125000,
-  pendingReviews: 8,
-};
-
 const Dashboard = () => {
   const session = useSession();
 
-  if (session.status === 'loading') {
+  // TanStack Query
+  const {
+    data: stats,
+    isLoading,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ['stats'],
+    queryFn: getStats,
+    staleTime: 5 * 60 * 1000,
+  });
+
+  console.log(stats);
+
+  if (session.status === 'loading' || isLoading) {
     return (
       <div className='flex min-h-screen items-center justify-center bg-slate-50 dark:bg-slate-950'>
         <div className='space-y-4 text-center'>
@@ -45,6 +54,22 @@ const Dashboard = () => {
             Loading dashboard...
           </p>
         </div>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className='flex h-screen items-center justify-center text-rose-600'>
+        Error: {error instanceof Error ? error.message : 'Unknown error'}
+      </div>
+    );
+  }
+
+  if (!stats) {
+    return (
+      <div className='flex h-screen items-center justify-center text-slate-700 dark:text-slate-200'>
+        Stats not found
       </div>
     );
   }
@@ -82,25 +107,25 @@ const Dashboard = () => {
               <StatCard
                 Icon={Users}
                 label='Total Users'
-                value={mockAdminStats.totalUsers}
+                value={stats.totalUsers}
                 color='emerald'
               />
               <StatCard
                 Icon={BookOpen}
                 label='Total Recipes'
-                value={mockAdminStats.totalRecipes}
+                value={stats.totalRecipes}
                 color='amber'
               />
               <StatCard
                 Icon={Eye}
                 label='Total Views'
-                value={mockAdminStats.totalViews}
+                value={stats.totalRecipes}
                 color='rose'
               />
               <StatCard
                 Icon={Clock}
                 label='Pending Reviews'
-                value={mockAdminStats.pendingReviews}
+                value={stats.totalPending}
                 color='blue'
               />
             </>

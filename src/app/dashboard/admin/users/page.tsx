@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { Trash2, Shield, User, Search, Filter, UserCheck } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { deleteUser, getUsers, updateUserRole } from '@/lib/getAPIs';
+import { deleteUser, getStats, getUsers, updateUserRole } from '@/lib/getAPIs';
 import Image from 'next/image';
 import { toast } from 'sonner';
 
@@ -47,6 +47,17 @@ const AdminManageUsers = () => {
     staleTime: 5 * 60 * 1000,
   });
 
+  const {
+    data: stats,
+    isLoading: isStatsLoading,
+    isError: isStatsError,
+    error: statsError,
+  } = useQuery({
+    queryKey: ['stats'],
+    queryFn: getStats,
+    staleTime: 5 * 60 * 1000,
+  });
+
   // Filter users based on search and role
   const filteredUsers = useMemo(() => {
     return users.filter((user) => {
@@ -57,21 +68,6 @@ const AdminManageUsers = () => {
       return matchesSearch && matchesRole;
     });
   }, [users, searchTerm, roleFilter]);
-
-  // Calculate stats
-  const stats = useMemo(() => {
-    const totalUsers = users.length;
-    const adminCount = users.filter((user) => user.role === 'admin').length;
-    const regularUserCount = users.filter(
-      (user) => user.role === 'user',
-    ).length;
-
-    return {
-      totalUsers,
-      adminCount,
-      regularUserCount,
-    };
-  }, [users]);
 
   const handleRoleChange = async (userId: string, currentRole: string) => {
     const newRole = currentRole === 'admin' ? 'user' : 'admin';
@@ -156,7 +152,7 @@ const AdminManageUsers = () => {
     });
   };
 
-  if (isLoading) {
+  if (isLoading || isStatsLoading) {
     return (
       <div className='min-h-screen bg-slate-50 p-3 sm:p-4 md:p-6 dark:bg-slate-950'>
         <div className='mx-auto max-w-7xl'>
@@ -202,10 +198,11 @@ const AdminManageUsers = () => {
     );
   }
 
-  if (isError) {
+  if (isError || isStatsError) {
     return (
       <div className='flex h-screen items-center justify-center text-rose-600'>
-        Error: {error instanceof Error ? error.message : 'Unknown error'}
+        Error: {error instanceof Error ? error.message : 'Unknown error'} ||{' '}
+        {statsError instanceof Error ? statsError.message : 'Unknown error'}
       </div>
     );
   }
@@ -243,7 +240,7 @@ const AdminManageUsers = () => {
                   Total Users
                 </p>
                 <p className='text-xl font-bold text-slate-900 sm:text-2xl dark:text-slate-100'>
-                  {stats.totalUsers}
+                  {stats?.totalUsers}
                 </p>
               </div>
             </div>
@@ -259,7 +256,7 @@ const AdminManageUsers = () => {
                   Administrators
                 </p>
                 <p className='text-xl font-bold text-slate-900 sm:text-2xl dark:text-slate-100'>
-                  {stats.adminCount}
+                  {stats?.totalAdmin}
                 </p>
               </div>
             </div>
@@ -275,7 +272,7 @@ const AdminManageUsers = () => {
                   Regular Users
                 </p>
                 <p className='text-xl font-bold text-slate-900 sm:text-2xl dark:text-slate-100'>
-                  {stats.regularUserCount}
+                  {stats?.totalRegular}
                 </p>
               </div>
             </div>

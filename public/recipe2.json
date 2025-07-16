@@ -8,12 +8,7 @@
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Indian",
-    "tags": [
-      "Spicy",
-      "Dinner",
-      "Comfort Food",
-      "Healthy"
-    ],
+    "tags": ["Spicy", "Dinner", "Comfort Food", "Healthy"],
     "ingredients": [
       {
         "id": "1",
@@ -104,13 +99,7 @@
     "servings": 6,
     "difficulty": "Easy",
     "cuisine": "Mediterranean",
-    "tags": [
-      "Vegetarian",
-      "Healthy",
-      "Gluten-Free",
-      "Lunch",
-      "Quick"
-    ],
+    "tags": ["Vegetarian", "Healthy", "Gluten-Free", "Lunch", "Quick"],
     "ingredients": [
       {
         "id": "1",
@@ -201,12 +190,7 @@
     "servings": 24,
     "difficulty": "Easy",
     "cuisine": "American",
-    "tags": [
-      "Sweet",
-      "Dessert",
-      "Comfort Food",
-      "Snack"
-    ],
+    "tags": ["Sweet", "Dessert", "Comfort Food", "Snack"],
     "ingredients": [
       {
         "id": "1",
@@ -297,12 +281,7 @@
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Thai",
-    "tags": [
-      "Spicy",
-      "Dinner",
-      "Quick",
-      "Savory"
-    ],
+    "tags": ["Spicy", "Dinner", "Quick", "Savory"],
     "ingredients": [
       {
         "id": "1",
@@ -393,12 +372,7 @@
     "servings": 4,
     "difficulty": "Hard",
     "cuisine": "Italian",
-    "tags": [
-      "Vegetarian",
-      "Dinner",
-      "Comfort Food",
-      "Savory"
-    ],
+    "tags": ["Vegetarian", "Dinner", "Comfort Food", "Savory"],
     "ingredients": [
       {
         "id": "1",
@@ -489,12 +463,7 @@
     "servings": 4,
     "difficulty": "Medium",
     "cuisine": "Korean",
-    "tags": [
-      "Spicy",
-      "Dinner",
-      "Healthy",
-      "Savory"
-    ],
+    "tags": ["Spicy", "Dinner", "Healthy", "Savory"],
     "ingredients": [
       {
         "id": "1",

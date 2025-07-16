@@ -64,3 +64,13 @@ export const deleteRecipe = async (recipeId: string) => {
   const res = await axios.post(`${url}/api/v1/recipes/delete`, { recipeId });
   return res;
 };
+
+//get stats
+export const getStats = async () => {
+  try {
+    const res = await axios.get(`${url}/api/v1/stats`);
+    return res.data.stats;
+  } catch (err) {
+    throw new Error(`Failed to get stats: ${err}`);
+  }
+};
