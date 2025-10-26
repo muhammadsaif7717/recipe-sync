@@ -88,7 +88,9 @@
     },
     "status": "pending",
     "createdAt": "2025-07-15T20:41:22.541Z",
-    "updatedAt": ""
+    "updatedAt": "",
+    "favorites": 45,
+    "totalViews": 1240
   },
   {
     "title": "Mediterranean Quinoa Salad",

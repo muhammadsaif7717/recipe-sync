@@ -46,43 +46,22 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Muhammad Saif',
-      role: 'Founder & Tech Lead',
+      role: 'Backend Developer',
       bio: 'Full-stack developer passionate about food technology.',
       image: 'https://i.ibb.co/JR145fVk/saif.png',
     },
     {
-      name: 'Fuade Hasan Alamin',
-      role: 'Community Manager',
-      bio: 'Food blogger connecting cultures through cuisine',
-      image: 'https://i.ibb.co/G4gSwBr6/IMG20230806161044-1.jpg',
+      name: 'Nafiz Mahmud Nirjon',
+      role: 'Project Manager',
+      bio: 'Project manager passionate about food technology.',
+      image:
+        'https://i.ibb.co.com/jZrJBhvF/Whats-App-Image-2025-10-27-at-00-06-58.jpg',
     },
     {
-      name: 'Toimom Hasan',
-      role: 'Community Manager',
-      bio: 'Food blogger connecting cultures through cuisine',
-      image:
-        'https://i.ibb.co/G4qvLKpw/459182227-122098767392523158-7832339037180935556-n.jpg',
-    },
-    {
-      name: 'Ahmed Omor',
-      role: 'Community Manager',
-      bio: 'Food blogger connecting cultures through cuisine',
-      image:
-        'https://i.ibb.co/BKNvyrDw/493262136-670193989302445-3062080732779733389-n.jpg',
-    },
-    {
-      name: 'Mahmudun Nabin Ejaj',
-      role: 'Community Manager',
-      bio: 'Food blogger connecting cultures through cuisine',
-      image:
-        'https://i.ibb.co/8gDDm4w0/469928575-636824425763636-5033176549494991802-n.jpg',
-    },
-    {
-      name: 'Polok Ahmed Himel',
-      role: 'Community Manager',
-      bio: 'Food blogger connecting cultures through cuisine',
-      image:
-        'https://i.ibb.co/DfgT2msH/438222507-948731066912587-3048292677563635771-n.jpg',
+      name: 'Tarikuzzaman Tuhin',
+      role: 'Fronted Developer',
+      bio: 'Frontend Developer passionate about food technology.',
+      image: 'https://i.ibb.co.com/v4Xd2Cf5/image.png',
     },
   ];
 
