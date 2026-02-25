@@ -62,10 +62,10 @@ const AboutPage = () => {
       image: 'https://i.ibb.co.com/FPTFs3H/badol.jpg',
     },
     {
-      name: 'Sardar Khan',
+      name: 'Md. Fahim Faysal',
       role: 'Frontend UI/UX Reviewer',
       bio: 'Reviewed UI layouts, accessibility, and responsiveness. Suggested design improvements for better user experience.',
-      image: 'https://i.ibb.co.com/sdt0MY22/download.png',
+      image: 'https://i.ibb.co.com/43Bvytx/IMG-20260226-WA0007.jpg',
     },
     {
       name: 'Ariful Islam Shuvo',
