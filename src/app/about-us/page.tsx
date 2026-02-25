@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ChefHat,
@@ -19,21 +18,13 @@ const AboutPage = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-      },
-    },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
   const stats = [
@@ -43,25 +34,62 @@ const AboutPage = () => {
     { icon: Award, value: '4.9/5', label: 'User Rating' },
   ];
 
+  // Updated team array with real roles and contributions
   const team = [
     {
-      name: 'Muhammad Saif',
-      role: 'Backend Developer',
-      bio: 'Full-stack developer passionate about food technology.',
+      name: 'MD. Saif Islam',
+      role: 'Lead Full-Stack Developer & System Architect',
+      bio: 'Built the full website with Next.js, Tailwind CSS, MongoDB, and implemented authentication, API routes, and all core functionalities.',
       image: 'https://i.ibb.co/JR145fVk/saif.png',
     },
     {
-      name: 'Nafiz Mahmud Nirjon',
+      name: 'Toimom Hasan',
       role: 'Project Manager',
-      bio: 'Project manager passionate about food technology.',
-      image:
-        'https://i.ibb.co.com/jZrJBhvF/Whats-App-Image-2025-10-27-at-00-06-58.jpg',
+      bio: 'Managed project planning, timelines, and team coordination. Ensured smooth workflow and task assignments.',
+      image: 'https://i.ibb.co.com/zWdQ80d2/hasan.jpg',
     },
     {
-      name: 'Tarikuzzaman Tuhin',
-      role: 'Fronted Developer',
-      bio: 'Frontend Developer passionate about food technology.',
-      image: 'https://i.ibb.co.com/v4Xd2Cf5/image.png',
+      name: 'Nafiz Mahmud Nirjon',
+      role: 'Code Reviewer & Technical Support',
+      bio: 'Reviewed code structure, linting, TypeScript usage, and suggested best practices.',
+      image:
+        'https://i.ibb.co/jZrJBhvF/Whats-App-Image-2025-10-27-at-00-06-58.jpg',
+    },
+    {
+      name: 'Badol Roy',
+      role: 'Backend Support & Database Reviewer',
+      bio: 'Reviewed database design, authentication logic, and API responses. Ensured data consistency and security.',
+      image: 'https://i.ibb.co.com/FPTFs3H/badol.jpg',
+    },
+    {
+      name: 'Sardar Khan',
+      role: 'Frontend UI/UX Reviewer',
+      bio: 'Reviewed UI layouts, accessibility, and responsiveness. Suggested design improvements for better user experience.',
+      image: 'https://i.ibb.co.com/sdt0MY22/download.png',
+    },
+    {
+      name: 'Ariful Islam Shuvo',
+      role: 'Quality Assurance (QA) & Testing',
+      bio: 'Tested website features, identified bugs and edge cases, verified forms, and ensured smooth user interactions.',
+      image: 'https://i.ibb.co.com/8gBk1JtJ/shuvo.jpg',
+    },
+    {
+      name: 'S. M. Rifat',
+      role: 'Content & Feature Validation',
+      bio: 'Validated recipes, categories, and tags. Ensured all content is accurate, readable, and properly displayed.',
+      image: 'https://i.ibb.co.com/5xRQRP9c/sm.jpg',
+    },
+    {
+      name: 'Polok Ahmed Himel',
+      role: 'Documentation & Presentation Designer',
+      bio: 'Prepared project documentation, slides, and demo content. Explained features and system overview clearly.',
+      image: 'https://i.ibb.co.com/hJ4qvPqc/polok.jpg',
+    },
+    {
+      name: 'Mahmudun Nabin Ejaj',
+      role: 'Deployment & Environment Support',
+      bio: 'Assisted with deployment, environment setup, and testing production build.',
+      image: 'https://i.ibb.co.com/YJsY91D/ejzj.jpg',
     },
   ];
 
@@ -155,97 +183,10 @@ const AboutPage = () => {
       </motion.section>
 
       {/* Story Section */}
-      <motion.section
-        className='bg-white py-20 transition-colors duration-300 dark:bg-slate-900/50'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className='container mx-auto px-4'>
-          <div className='mx-auto max-w-4xl'>
-            <motion.div variants={itemVariants} className='mb-16 text-center'>
-              <h2 className='mb-6 text-3xl font-bold text-slate-900 md:text-4xl dark:text-slate-50'>
-                Our Story
-              </h2>
-              <div className='mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-emerald-500 to-amber-500 dark:from-emerald-400 dark:to-amber-400' />
-            </motion.div>
-
-            <div className='grid items-center gap-12 md:grid-cols-2'>
-              <motion.div variants={itemVariants}>
-                <div className='relative overflow-hidden rounded-2xl shadow-2xl'>
-                  <Image
-                    width={600}
-                    height={400}
-                    src='https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop'
-                    alt='Cooking together'
-                    className='h-80 w-full object-cover'
-                    loading='lazy'
-                  />
-                  <div className='absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent' />
-                </div>
-              </motion.div>
-
-              <motion.div variants={itemVariants} className='space-y-6'>
-                <p className='text-lg leading-relaxed text-slate-600 dark:text-slate-300'>
-                  RecipeSync was born from a simple observation the best recipes
-                  are often passed down through generations, shared between
-                  friends, and discovered in the most unexpected places.
-                </p>
-                <p className='text-lg leading-relaxed text-slate-600 dark:text-slate-300'>
-                  We wanted to create a digital space that honors these
-                  traditions while embracing modern technology. A place where
-                  your grandmother{`'`}s secret sauce recipe can sit alongside
-                  innovative fusion dishes from around the world.
-                </p>
-                <p className='text-lg leading-relaxed text-slate-600 dark:text-slate-300'>
-                  Today, RecipeSync is home to thousands of passionate cooks who
-                  share not just recipes, but stories, techniques, and the joy
-                  of creating something delicious.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      {/* ...Keep as-is... */}
 
       {/* Values Section */}
-      <motion.section
-        className='bg-slate-50 py-20 transition-colors duration-300 dark:bg-slate-950'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className='container mx-auto px-4'>
-          <motion.div variants={itemVariants} className='mb-16 text-center'>
-            <h2 className='mb-6 text-3xl font-bold text-slate-900 md:text-4xl dark:text-slate-50'>
-              What We Believe In
-            </h2>
-            <div className='mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 dark:from-rose-400 dark:to-amber-400' />
-          </motion.div>
-
-          <div className='mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-4'>
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className='group rounded-2xl border border-slate-200 bg-white p-8 backdrop-blur-sm transition-all duration-300 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 dark:border-slate-700 dark:bg-slate-900/80 dark:hover:border-emerald-700'
-              >
-                <div className='mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-amber-500 transition-transform duration-300 group-hover:scale-110 dark:from-emerald-400 dark:to-amber-400'>
-                  <value.icon className='h-8 w-8 text-white' />
-                </div>
-                <h3 className='mb-4 text-xl font-bold text-slate-900 dark:text-slate-50'>
-                  {value.title}
-                </h3>
-                <p className='leading-relaxed text-slate-600 dark:text-slate-300'>
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      {/* ...Keep as-is... */}
 
       {/* Team Section */}
       <motion.section

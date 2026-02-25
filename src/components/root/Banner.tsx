@@ -26,18 +26,6 @@ const HomepageBanner = () => {
   const heroSlides = [
     {
       id: 1,
-      title: 'Discover Culinary Magic',
-      subtitle: 'From Kitchen to Table',
-      description:
-        'Explore thousands of handcrafted recipes from world-class chefs and passionate home cooks.',
-      backgroundImage:
-        'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136',
-      primaryAction: 'Start Cooking',
-      secondaryAction: 'Watch Demo',
-      stats: { recipes: '12K+', chefs: '5K+', rating: '4.9' },
-    },
-    {
-      id: 2,
       title: 'Share Your Passion',
       subtitle: 'Join Our Community',
       description:
@@ -49,13 +37,23 @@ const HomepageBanner = () => {
       stats: { recipes: 'New Daily', chefs: 'Global', rating: 'Trending' },
     },
     {
+      id: 2,
+      title: 'Discover Culinary Magic',
+      subtitle: 'From Kitchen to Table',
+      description:
+        'Explore thousands of handcrafted recipes from world-class chefs and passionate home cooks.',
+      backgroundImage: 'https://i.ibb.co.com/F4PwQDmJ/recipe1.avif',
+      primaryAction: 'Start Cooking',
+      secondaryAction: 'Watch Demo',
+      stats: { recipes: '12K+', chefs: '5K+', rating: '4.9' },
+    },
+    {
       id: 3,
       title: 'Master Every Dish',
       subtitle: 'Learn & Create',
       description:
         'Step-by-step tutorials and expert tips to elevate your cooking skills to professional levels.',
-      backgroundImage:
-        'https://images.unsplash.com/photo-1556906781-9a412961c28c',
+      backgroundImage: 'https://i.ibb.co.com/7t4FbWh6/recipe2.avif',
       primaryAction: 'Learn Now',
       secondaryAction: 'Browse Tips',
       stats: { recipes: 'Expert', chefs: 'Tutorials', rating: 'Pro' },
