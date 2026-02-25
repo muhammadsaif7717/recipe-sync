@@ -30,8 +30,8 @@ const RecipeDetails = ({ id }: { id: string }) => {
 
   // TanStack Query
   const { data, isLoading, isError, error } = useQuery<Recipe>({
-    queryKey: ['recipe'],
-    queryFn: () => getRecipeById(id),
+    queryKey: ['recipe', id],
+    queryFn: async () => await getRecipeById(id),
     staleTime: 5 * 60 * 1000,
   });
 
